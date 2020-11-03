@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+         <title>CRUD Vanilla JS</title>
+         <link rel="stylesheet" href="styles/styles.css" />
+         <link rel="stylesheet" href="styles/modal.css" />
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	</head>
+	<body>
+		<header></header>
+            <div class='crud-header-div'>
+                 <ul class='crud-header crud-header-theme flex-container'>
+                     <li class='flex-item'> <i class="fa fa-handshake-o" aria-hidden="true"></i> ABC BANK</li>
+                     <li class='flex-item text-effect'>CONTROL CENTER</li>
+                     <li class='flex-item push'><i class="fa fa-th" aria-hidden="true"></i></li>
+                     <li class='flex-item'><i class="fa fa-user-circle-o" aria-hidden="true"></i></li>
+                 </ul>
+             </div>
+
+            <div class='flex-container title-card'>
+                <h3 class='flex-item' id='Employee-text'>Employees</h3>
+                <button class='flex-item push create-button' id='createButton'>Create Employee</button>
+                <div class="break"></div>
+                
+                <div class="input-wrapper">
+                  <input placeholder="search" type="text" id="search" />
+                </div>
+             </div>  
+
+
+             <div class="table-container" id="table-container">
+                
+
+             </div>
+            
+             
+
+            
+            <!-- The VIEW Modal -->
+            <div id="view-modal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                       <h3 class="modal-title">EM01</h3> 
+                       <span class="close"><div class="close-button" style="height: 40px;width: 40px;">&times</div></span>
+                    </div>
+                    <div class="modal-body">
+                    <div class="modal-label" id="vname">
+                    <p>NAME</p><h2>Tom Hanks</h2>
+                    </div>
+                    <div class="modal-label" id="vemployeeCode">
+                    <p>Employee code</p><h1>E3</h1>
+                    </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <h3></h3>
+                    </div>
+                </div>
+    
+                </div>
+
+                <!-- The DELEETE Modal -->
+            <div id="delete-modal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                       <h3 class="modal-title">EM01</h3> 
+                       <span class="close">&times</span>
+                    </div>
+                    <div class="modal-body">
+                    <div class="modal-label" id="dname" >
+                    
+                    </div>
+                    <div class="modal-label" id="demployeeCode" > 
+                    
+                    </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <button class='flex-item push delete-button' id="deleteButton">Delete</button>
+                    </div>
+                </div>
+    
+                </div>
+
+
+            <!-- Create Modal-->
+            <div id="create-modal" class="modal">
+                <div class="modal-content">
+            <form id='createForm'>
+            <div class="modal-header">
+            <h3>Create Employee</h3>
+            <span class="close">&times</span>
+            </div>
+             
+            <div class="modal-body">
+            
+            
+             <div class="modal-label">   
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+             </div>
+             <div class="modal-label"> 
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+             </div>
+             <div class="modal-label">
+            <label for="lname">Job Title</label>
+            <input type="text" id="jobtitle" name="jobtitle" placeholder="Job Title">
+             </div>
+             <div class="modal-label">
+            <label for="lname">E-mail </label>
+            <input type="text" id="email" name="email" placeholder="E-Mail">
+             </div>
+             <div class="modal-label">
+            <label for="lname">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number ">
+              </div>
+              <div class="modal-label">
+            <label for="lname">Date Of Birthday</label>
+            <input type="text" id="dob" name="jobtitle" placeholder="Date of Birth">
+             </div>
+
+             <div class="modal-footer">
+            <button class='flex-item push create-button' id="createSubmit" >Create</button>
+            </div>
+            </div>
+            </form>
+        </div>
+    </div>
+            
+                
+              
+		
+
+    </body>
+    <script type="module" src="./Scripts/script.js"  defer></script>
+    
+</html>
